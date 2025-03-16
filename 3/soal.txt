@@ -1,0 +1,36 @@
+Buatlah sebuah class Klasemen yang akan mencatat setiap poin yang didapatkan oleh masing-masing klub sepak bola dalam setiap pertandingan yang sudah berlangsung.
+
+ 
+
+Pendapatan poin klub sepakbola akan dihitung berdasarkan mekanisme berikut ini:
+
+Pemenang pertandingan akan mendapatkan 3 poin.
+Apabila kedua klub memiliki skor yang sama, maka kedua klub akan mendapatkan masing-masing 1 poin.
+Poin klub yang kalah tidak akan ditambahkan ataupun dikurangi.
+ 
+
+Adapun class yang dibuat harus mengimplementasikan fungsi-fungsi berikut ini:
+
+ 
+
+void catatPermainan(string klubKandang, string klubTandang, string skor);
+array cetakKlasemen();
+string ambilPeringkat(int nomorPeringkat);
+ 
+
+Contoh:
+
+$klasemen = new Klasemen(['Liverpool', 'Chelsea', 'Arsenal']);
+$klasemen>catatPermainan('Arsenal', 'Liverpool', '2:1');
+$klasemen>catatPermainan('Arsenal', 'Chelsea', '1:1');
+$klasemen>catatPermainan('Chelsea', 'Arsenal', '0:3');
+$klasemen>catatPermainan('Chelsea', 'Liverpool', '3:2');
+$klasemen>catatPermainan('Liverpool', 'Arsenal', '2:2');
+$klasemen>catatPermainan('Liverpool', 'Chelsea', '0:0');
+// mengembalikan hasil ['Arsenal'=>8, 'Chelsea'=>5, 'Liverpool'=>2]
+$klasemen>cetakKlasemen();
+// returns 'Chelsea'
+$klasemen>ambilPeringkat(2);
+ 
+
+Silakan tuliskan URL ideone.com dari solusi permasalahan di atas, dan tuliskan bahasa pemrograman apa yang Anda gunakan untuk solusi tersebut.

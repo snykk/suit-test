@@ -1,0 +1,69 @@
+Question 1/3
+(40 p.)
+Permainan KotakKatik merupakan papan permainan berupa tabel 6 x 6 yang selalu memiliki titik mulai dan titik akhir pada sudut kiri atas dan kanan bawah papan permainan. Pada kotak-kotak lainnya dalam papan permainan berisikan angka secara acak, berperan sebagai jumlah energi yang dibutuhkan untuk melewati kotak tersebut. Tujuan dari permainan ini adalah untuk menemukan jalan yang dapat menghubungkan titik awal dan titik akhir dengan jumlah total energi paling kecil.
+
+
+Ilustrasi:
+
+
+
+
+Jumlah energi:
+1+1+2+1+1+8+1+1+2 = 18
+
+ 
+
+Buatlah sebuah class KotakKatik yang memiliki dua fungsi yaitu:
+
+ 
+
+temukanJalan(): array
+Fungsi ini akan berusaha menemukan jalan yang menghubungkan titik awal dan titik akhir dengan konsumsi energi yang paling sedikit. Jalan tidak boleh diagonal.
+
+ 
+
+totalEnergi(): int
+Fungsi ini akan mengembalikan nilai total energi yang dibutuhkan untuk melewati jalan yang sudah ditemukan melalui fungsi pertama. Apabila class KotakKatik belum memiliki set koordinat jalan yang menjadi solusi, maka fungsi ini akan menghasilkan error/exception.
+
+ 
+
+
+class KotakKatik
+{
+    /**
+     * Papan permainan
+     * Koordinat [0,0] dan [5, 5] akan selalu berisikan nilai 0
+     * sebagai titik awal dan titik akhir.
+     */
+    private array $papan = [
+        [0, 1, 1, 7, 6, 4],
+        [4, 6, 2, 8, 6, 1],
+        [2, 1, 1, 1, 8, 4],
+        [8, 7, 4, 9, 1, 1],
+        [8, 8, 6, 7, 9, 2],
+        [8, 8, 5, 2, 6, 0],
+    ];
+
+    private array $solusiJalan = [];
+
+    public function temukanJalan(): array
+    {
+        // Tolong implementasikan saya
+    }
+
+    public function totalEnergi(): int
+    {
+        // Tolong implementasikan saya
+    }
+}
+ 
+
+Contoh:
+
+$permainan = new KotakKatik();
+// mengembalikan hasil [[0,0], [1,0], [2,0], [2,1], [2,2], [3,2], [4,2], [4,3], [5,3], [5,4], [5,5]]
+$permainan->temukanJalan();
+// mengembalikan hasil 18
+$permainan->totalEnergi();
+
+Silakan tuliskan URL ideone.com dari solusi permasalahan di atas, dan tuliskan bahasa pemrograman apa yang Anda gunakan untuk solusi tersebut.
